@@ -1,0 +1,22 @@
+INDEX VERSION 1.131+C:\Users\pedro.lins.sant.ana\Desktop\Testes\Biblioteca\.metadata\.plugins\org.eclipse.jdt.core
+189429804.index
+4257570050.index
+4043942481.index
+647729579.index
+1608148396.index
+482761182.index
+769241301.index
+154932942.index
+380074565.index
+1990009524.index
+3968036998.index
+587264261.index
+713420641.index
+3086052669.index
+2251459877.index
+3955468356.index
+2279314477.index
+2314367584.index
+4034614988.index
+1226106704.index
+4103521864.index
