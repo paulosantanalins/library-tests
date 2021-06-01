@@ -1,0 +1,23 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class HomePage {
+	protected WebDriver driver;	
+	
+	private By btnLogout = By.linkText("Logout");
+	
+	
+	public HomePage(WebDriver driver) {
+		this.driver = driver;
+		
+		if(!encontrouLogout()) {
+			throw new IllegalStateException("Usuario nao logado");
+		}
+	}
+	
+	
+	public boolean encontrouLogout() {
+		return (driver.findElements(btnLogout).size() > 0);
+	}
+
+}

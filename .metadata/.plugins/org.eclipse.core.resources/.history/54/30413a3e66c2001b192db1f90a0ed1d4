@@ -1,0 +1,39 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class LivroPage {
+	protected WebDriver driver;
+	
+	private By livrosBy = By.linkText("Livros");
+	
+	private By listaLivrosBy = By.linkText("Lista de Livros");
+	
+	private By btnEditarBy = By.linkText("Editar");
+	
+	private By tituloBy = By.id("titulo");
+	
+	private By autorBy = By.id("autor");
+	
+	private By isbnBy = By.id("isbn");
+   
+	private By btnAtualizaLivroBy = By.cssSelector(".btn");
+    
+	
+	public LivroPage(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	
+	public boolean atualizaLivro(String titulo) {
+		driver.findElement(livrosBy).click();
+        driver.findElement(listaLivrosBy).click();
+        driver.findElement(btnEditarBy).click();
+        driver.findElement(tituloBy).click();
+        driver.findElement(tituloBy).clear();
+        driver.findElement(tituloBy).sendKeys(titulo);
+        driver.findElement(btnAtualizaLivroBy).click();
+        
+        return true;
+	}
+	
+}

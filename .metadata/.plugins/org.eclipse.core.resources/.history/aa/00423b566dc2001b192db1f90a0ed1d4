@@ -1,0 +1,85 @@
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class LivroPage {
+	protected WebDriver driver;
+	
+	private By livrosBy = By.linkText("Livros");
+	
+	private By listaLivrosBy = By.linkText("Lista de Livros");
+	
+	private By btnEditarBy = By.linkText("Editar");
+	
+	private By tituloBy = By.id("titulo");
+	
+	private By autorBy = By.id("autor");
+	
+	private By isbnBy = By.id("isbn");
+   
+	private By btnAtualizaLivroBy = By.cssSelector(".btn");
+	
+	private By btnEditarListaBy = By.linkText("Editar");
+    
+	
+	public LivroPage(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	public boolean encontrouEditar() {
+		return (driver.findElements(btnEditarListaBy).size() > 0);
+	}
+	
+	
+	public void atualizaLivro(String ISBN, String autor, String titulo) throws Exception {
+		driver.findElement(livrosBy).click();
+        driver.findElement(listaLivrosBy).click();
+        driver.findElement(btnEditarBy).click();
+        
+        
+        driver.findElement(isbnBy).clear();
+        driver.findElement(autorBy).clear();
+        driver.findElement(tituloBy).clear();
+        
+        driver.findElement(isbnBy).sendKeys(ISBN);
+        driver.findElement(autorBy).sendKeys(autor);
+        driver.findElement(tituloBy).sendKeys(titulo);
+        driver.findElement(btnAtualizaLivroBy).click();
+        
+        if(!encontrouEditar())
+        	throw new Exception("Nao foi possivel atualizar");
+	}
+	
+	
+	public void excluirLivro(String ISBN) {
+		
+		driver.findElement(livrosBy).click();
+	    driver.findElement(listaLivrosBy).click();
+				
+		List<WebElement> Trs = driver.findElement(By.className("table")).findElements(By.tagName("tr"));
+		
+		for(WebElement tr : Trs) {
+			List<WebElement> Tds = tr.findElements(By.tagName("td"));
+			//for(WebElement td : Tds) {
+			//	System.out.println(Tds.size());
+			//}
+			
+			for(int i=1; i<=Tds.size(); i++) {
+				System.out.println(Tds.get(i).getText());
+				
+				if(Tds.get(0).getText() == ISBN) {
+					System.out.println("VALOR " + Tds.get(0).getText());
+				}
+			}
+		}
+		
+		
+	    
+	    //driver.findElement(By.linkText(ISBN));
+	    //driver.findElement(By.cssSelector("tr:nth-child(1) .delete")).click();
+	}
+	
+}

@@ -22,33 +22,43 @@ import org.openqa.selenium.Keys;
 import java.util.*;
 import java.net.MalformedURLException;
 import java.net.URL;
-public class TESTETest {
+
+public class REQ04ExcluirLivroTSTests {
   private WebDriver driver;
   private Map<String, Object> vars;
   JavascriptExecutor js;
   @Before
   public void setUp() {
+	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/browserDriver/chromedriver.exe");  
     driver = new ChromeDriver();
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
   }
   @After
   public void tearDown() {
-    driver.quit();
+    //driver.quit();
   }
+  
   @Test
-  public void tESTE() {
+  public void ExcluirLivroTSTests() {
     driver.get("https://ts-scel.herokuapp.com/login");
-    driver.manage().window().setSize(new Dimension(1552, 849));
-    driver.findElement(By.name("username")).click();
-    driver.findElement(By.name("username")).sendKeys("maria");
-    driver.findElement(By.name("password")).sendKeys("456");
-    driver.findElement(By.name("password")).sendKeys(Keys.ENTER);
-    driver.findElement(By.linkText("Livros")).click();
-    driver.findElement(By.linkText("Lista de Livros")).click();
-    driver.findElement(By.linkText("Editar")).click();
-    driver.findElement(By.id("titulo")).click();
-    driver.findElement(By.id("titulo")).sendKeys("Engenharia de Software 1");
-    driver.findElement(By.cssSelector(".btn")).click();
+    
+    LoginPage login = new LoginPage(driver);
+    
+    try {
+    	
+    	HomePage logado = login.loginUsuarioValido("maria", "456");
+   
+    	LivroPage livro = new LivroPage(driver);
+    	
+    	//livro.excluirLivro("1111");
+    	
+    	livro.excluirTodosLivros();
+    	
+    }catch (Exception e) {
+		System.out.println("ERRO -> " + e.getMessage());
+	}
+    
+   
   }
 }

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="REQ04ExcluirLivroTSTests" project="test-java" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.tests.library.REQ04ExcluirLivroTSTests" time="4.589">
+    <testcase name="ExcluirLivroTSTests" classname="com.tests.library.REQ04ExcluirLivroTSTests" time="4.589"/>
+  </testsuite>
+</testrun>
