@@ -37,7 +37,7 @@ public class REQ04ExcluirLivroTSTests {
   }
   @After
   public void tearDown() {
-    //driver.quit();
+    driver.quit();
   }
   
   @Test

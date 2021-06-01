@@ -1029,3 +1029,11 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact com.google.co
 2021-05-31 21:47:47,560 [Worker-138: Launching REQ04ExcluirLivroTSTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2021-05-31 21:47:47,561 [Worker-138: Launching REQ04ExcluirLivroTSTests] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2021-05-31 21:47:47,562 [Worker-138: Launching REQ04ExcluirLivroTSTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-05-31 21:59:20,311 [Worker-141: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-05-31 21:59:20,312 [Worker-141: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-05-31 21:59:20,313 [Worker-141: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-05-31 21:59:20,314 [Worker-141: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-05-31 22:02:47,080 [Worker-144: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-05-31 22:02:47,081 [Worker-144: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-05-31 22:02:47,082 [Worker-144: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-05-31 22:02:47,084 [Worker-144: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
